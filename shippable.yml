@@ -18,3 +18,7 @@ notifications:
    email: false
 
 archive: true
+
+branches:
+ only:
+  - test-only-branch
