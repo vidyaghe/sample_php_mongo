@@ -5,6 +5,11 @@ php:
 
 services:
   - mongodb
+  
+env:
+ global:
+  - secure: K0cIiZlxi1qkrHuB845n8ozDuP8RCXCk42xyoqKpfcvYs6nnvS1SpIYqZwVysXO3cpgNJ6L2CaPS15++oAiqtWf+9/dNuZZQhtZi6fSp3nLLBtkqmlbKg4VcFhm8EJbwwDDsyX2+zJZGSdqxMjntRB9wGpJJSs+nkSDOrrTe88T2ILqFzpXWTMef8o1FzDhPA/jAll9Nrqvf8+LXyOzxKxP3FPKHsD56leRbjVIMSljxxb9rNHCORx/X0VplTxPKZqSZLzsVuC/RMfp5qZUWVnw+Ccf/UxGnIJIlFCDbnQKXhXuWXGtYTVwCWwYlEkV/fcJuxoiAAuAmRM5FS0mEwA==
+
 before_script: 
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
@@ -14,6 +19,8 @@ before_script:
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/ConnectToMongoTest.php
   
+after_script:
+  - echo $sec
 notifications:
    email: false
 
