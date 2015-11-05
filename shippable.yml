@@ -29,3 +29,9 @@ archive: true
 branches:
  except:
   - test-exclude-branch
+notifications:
+ email:
+   recipients:
+     - "vidya@shippable.com"
+   on_success: always
+   on_failure: change
