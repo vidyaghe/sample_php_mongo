@@ -30,6 +30,6 @@ branches:
 notifications:
  email:
    recipients:
-     - "vidya@shippable.com"
+     - "vidyaghe@gmail.com"
    on_success: always
    on_failure: change
