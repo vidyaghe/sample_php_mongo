@@ -21,8 +21,6 @@ script:
   
 after_script:
   - echo $sec
-notifications:
-   email: false
 
 archive: true
 
