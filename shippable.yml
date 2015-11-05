@@ -20,5 +20,5 @@ notifications:
 archive: true
 
 branches:
- only:
-  - test-only-branch
+ except:
+  - test-exclude-branch
