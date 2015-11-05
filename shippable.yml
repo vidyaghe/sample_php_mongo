@@ -21,8 +21,7 @@ script:
   
 after_script:
   - echo $sec
-notifications:
-   email: false
+
 
 archive: true
 
@@ -33,5 +32,5 @@ notifications:
  email:
    recipients:
      - "vidya@shippable.com"
-   on_success: always
-   on_failure: change
+   on_success: change
+   on_failure: always
