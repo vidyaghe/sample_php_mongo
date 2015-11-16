@@ -27,6 +27,7 @@ archive: true
 branches:
  except:
   - test-exclude-branch
+  
 notifications:
  email:
    recipients:
